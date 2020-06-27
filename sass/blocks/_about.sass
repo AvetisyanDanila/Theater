@@ -1,0 +1,73 @@
+.about
+    padding-top: 100px
+    @media screen and ( max-width: 991px )
+        padding-top: 50px
+    &-blocks
+        display: flex
+        justify-content: center
+        @media screen and ( max-width: 768px )
+            flex-direction: column
+            align-items: center
+            justify-content: center
+    &__title
+        margin-bottom: 70px
+        @media screen and ( max-width: 991px )
+            margin-bottom: 30px
+    &-block
+        margin-right: 30px
+        @media screen and ( max-width: 767px )
+            margin-right: 0
+            &:nth-of-type(2)
+                display: flex
+                flex-wrap: wrap
+                justify-content: center
+                @media screen and ( max-width: 575px )
+                    align-items: center
+        &:last-child
+            margin-right: 0
+        &__title
+            font-size: 21px
+            line-height: 29px
+            color: #fff
+            font-family: 'OpenSansCondensed Bold'
+            letter-spacing: 0.1em
+            text-transform: uppercase
+            margin-bottom: 40px
+            @media screen and ( max-width: 767px )
+                width: 100%
+                text-align: center
+                margin-top: 30px
+        &__text
+            max-width: 445px
+            font-size: 14px
+            line-height: 150%
+            color: #fff
+            @media screen and ( max-width: 768px )
+                text-align: center
+        &__label
+            display: block
+            margin-top: 15px
+            margin-bottom: 25px
+            font-family: 'OpenSansCondensed Bold'
+            font-size: 16px
+            line-height: 22px
+            letter-spacing: 0.05em
+            color: #fff
+            @media screen and ( max-width: 575px )
+                text-align: center
+            & span
+                color: #D1A954
+        &:last-child img
+            @media screen and ( max-width: 1199px )
+                display: none
+        &__info
+            @media screen and ( max-width: 767px )
+                margin-right: 60px
+                @media screen and ( max-width: 575px )
+                    margin-right: 0
+                    width: 100%
+                    & img
+                        display: block
+                        margin: 0 auto
+                &:last-child
+                    margin-right: 0

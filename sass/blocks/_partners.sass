@@ -1,0 +1,44 @@
+.partners
+    padding-top: 100px
+    @media screen and ( max-width: 991px )
+        padding-top: 50px
+    &__title
+        margin-bottom: 70px
+        @media screen and ( max-width: 991px )
+            margin-bottom: 30px
+    &-blocks
+        display: flex
+        justify-content: space-between
+        flex-wrap: wrap
+    &-block
+        width: 25%
+        @media screen and ( max-width: 991px )
+            width: 50%
+            margin-bottom: 50px
+            &:last-child
+                margin-bottom: 5px
+            &:nth-last-child(2)
+                margin-bottom: 5px
+        @media screen and ( max-width: 575px )
+            width: 100%
+            &:nth-last-child(2)
+                margin-bottom: 50px
+            &:last-child
+                margin-bottom: 0
+            &:nth-of-type(1)
+                margin-bottom: 50px!important
+        &:nth-of-type(1)
+            margin-bottom: 80px
+            @media screen and ( max-width: 991px )
+                margin-bottom: 0
+        & svg
+            display: block
+            margin: 0 auto
+            cursor: pointer
+        & path
+            fill: rgba(255, 255, 255, 0.5)
+            transition: 0.3s
+        &:hover
+            @media screen and ( min-width: 767px )
+                & path
+                    fill: white

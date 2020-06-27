@@ -1,0 +1,179 @@
+.main
+    background-image: url(../img/main/bg.jpg)
+    background-size: cover
+    width: 100%
+    min-height: 100vh
+    display: flex
+    justify-content: center
+    align-items: center
+    position: relative
+    &__body
+        display: flex
+        justify-content: center
+        align-items: center
+        position: relative
+        @media screen and ( max-width: 1199px )
+            justify-content: start
+        @media screen and ( max-width: 768px )
+            justify-content: center
+    & a 
+        text-decoration: none
+        outline: none
+    &_left
+        display: flex
+        flex-direction: column
+        align-items: start
+        margin-right: 125px 
+        @media screen and ( max-width: 1199px )
+            margin-right: 0
+            margin-left: 35px
+        @media screen and ( max-width: 768px )
+            margin-left: 0
+        @media screen and ( max-width: 575px )
+            align-items: center
+    &__title
+        font-family: 'OpenSansCondensed Bold'
+        font-size: 64px
+        line-height: 87px
+        letter-spacing: 0.1em
+        text-transform: uppercase
+        color: #FFFFFF
+        margin-bottom: 50px
+        @media screen and ( max-width: 991px )
+            font-size: 52px
+            line-height: 65px
+            margin-bottom: 20px
+        @media screen and ( max-width: 575px )
+            font-size: 40px
+            line-height: 55px
+            text-align: center
+    &__text
+        font-size: 14px
+        line-height: 150%
+        color: #FFFFFF
+        max-width: 540px
+        margin-bottom: 50px
+        @media screen and ( max-width: 575px )
+            text-align: center
+    &__button
+        display: block
+        padding: 13px 47px
+        background-color: #D1A954
+        font-family: 'OpenSansCondensed Bold'
+        font-size: 18px
+        line-height: 25px
+        letter-spacing: 0.1em
+        text-transform: uppercase
+        color: #fff
+        border: 2px solid #D1A954
+        transition: 0.3s
+        @media screen and ( min-width: 767px )
+            &:hover
+                background-color: transparent
+        &:hover
+            color: #fff
+    &-contacts
+        position: absolute
+        left: 0
+        height: 100%
+        display: flex
+        flex-direction: column
+        justify-content: flex-end
+        align-items: center
+        background: rgba(51, 51, 51, 0.75)
+        width: 70px
+        @media screen and ( max-width: 768px )
+            display: none
+        &__title
+            transform-origin: center
+            white-space: nowrap
+            transform: rotate(-90deg)
+            font-family: 'OpenSansCondensed Bold'
+            font-size: 18px
+            line-height: 25px
+            letter-spacing: 0.1em
+            text-transform: uppercase
+            color: #c4c4c4
+            @media screen and ( max-width: 1199px )
+                font-size: 16px
+                line-height: 22px
+        &__line
+            height: 80px
+            width: 3px
+            background-color: #C4C4C4
+            margin-top: 130px
+            margin-bottom: 20px
+            @media screen and ( max-width: 1199px )
+                height: 50px
+                margin-top: 115px
+        & svg
+            margin-bottom: 30px
+            transition: 0.3s
+            & path
+                transition: 0.3s
+            &:hover
+                transform: scale(1.1)
+                & path
+                    fill: #D1A954
+    &-images
+        &__img
+            width: 300px
+            @media screen and ( max-width: 1600px ) 
+                width: 245px
+            &:nth-of-type(1)
+                position: relative
+                top: -20px
+                left: -20px
+                z-index: 2
+            &:nth-of-type(2)
+                position: absolute
+                top: 20px
+                left: 20px
+                z-index: 1
+                &::after
+                    content: ''
+                    position: absolute
+                    width: 100%
+                    height: 100%
+                    background-color: #D1A954
+                    top: 0
+                    left: 0
+                    opacity: 0.85
+            & img
+                width: 100%
+    &-swiper
+        width: 300px
+        @media screen and ( max-width: 1600px )
+            width: 245px
+        @media screen and ( max-width: 1199px )
+            display: none
+    &-arrows
+        position: absolute
+        bottom: -50px
+        @media screen and ( max-width: 1199px )
+            display: none
+    &__arrow
+        background-color: transparent
+        border: none
+        &:focus
+            outline: none
+        font-family: 'OpenSansCondensed Bold'
+        font-size: 18px
+        line-height: 25px
+        letter-spacing: 0.1em
+        text-transform: uppercase
+        color: #C4C4C4
+        transition: 0.3s
+        & path
+            transform: translateY(-1px)
+            transition: 0.3s
+            fill: #C4C4C4
+        &:hover
+            color: #fff
+        &:hover path
+            fill: #fff
+        &:nth-of-type(2)
+            margin-left: 95px
+        @media screen and ( max-width: 1600px )
+            &:nth-of-type(2)
+                margin-left: 40px

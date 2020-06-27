@@ -1,0 +1,154 @@
+.header
+    position: fixed
+    top: 0
+    left: 0
+    width: 100%
+    padding-top: 50px
+    z-index: 1
+    transition: 0.3s
+    z-index: 2
+    @media screen and ( max-width: 768px )
+        padding-top: 30px
+    &.active
+        background-color: rgba(0, 0, 0, 0.5)
+        padding-bottom: 20px
+    & a 
+        text-decoration: none
+        outline: none
+    &__body
+        display: flex
+        justify-content: space-between
+        @media screen and ( max-width: 768px )
+            align-items: center
+    &__phone
+        display: block
+        font-family: 'OpenSansCondensed Bold'
+        font-size: 16px
+        line-height: 22px
+        letter-spacing: 0.05em
+        text-transform: uppercase
+        color: #fff
+        @media screen and ( max-width: 1199px )
+            width: 120px
+            margin: 0 auto
+            margin-top: 20px
+        @media screen and ( max-width: 768px )
+            display: none
+            margin: 0
+            position: relative
+            z-index: 1
+        &:hover
+            color: #fff
+        &::after
+            content: ''
+            display: block
+            width: 100%
+            height: 2px
+            background-color: #D1A954
+            margin-top: 3px
+    &__burger
+        @media screen and ( max-width: 768px )
+            display: block
+            position: relative
+            width: 30px
+            height: 20px
+            z-index: 2
+            &::before, &::after
+                content: ''
+                position: absolute
+                background-color: #fff
+                width: 100%
+                height: 4px
+                left: 0
+                transition: 0.3s
+            &::before
+                top: 0
+            &::after
+                bottom: -2px
+                width: 50%
+            & span 
+                position: absolute
+                background-color: #fff
+                left: 0
+                width: 75%
+                height: 4px
+                top: 9px
+                transition: 0.3s
+            &.active::before
+                transform: rotate(45deg)
+                top: 8px
+                left: 9px
+                background-color: #fff
+            &.active::after
+                transform: rotate(-45deg)
+                bottom: 8px
+                width: 100%
+                left: 9px
+                background-color: #fff
+            &.active span
+                transform: scale(0)
+                background-color: #fff
+.menu
+    @media screen and ( max-width: 1199px )
+        width: 100%
+    @media screen and ( max-width: 768px )
+        position: fixed
+        right: -100%
+        top: 0
+        width: 100%
+        height: 100%
+        background-color: rgb(51, 51, 51)
+        padding-top: 70px
+        overflow: auto
+        transition: 0.3s
+        margin-top: 0
+        &.active
+            right: 0
+    &__list
+        display: flex
+        @media screen and ( max-width: 1199px )
+            justify-content: space-around
+        @media screen and ( max-width: 768px )
+            flex-direction: column
+            align-items: center
+            justify-content: center
+            height: 100%
+    &__item
+        margin-right: 60px
+        @media screen and ( max-width: 1199px )
+            margin-right: 0
+        @media screen and ( max-width: 768px )
+            margin-bottom: 30px
+    &__link
+        font-family: 'OpenSansCondensed Bold'
+        font-size: 18px
+        line-height: 25px
+        letter-spacing: 0.1em
+        text-transform: uppercase
+        color: #fff
+        @media screen and ( max-width: 768px )
+            font-size: 22px
+        &:hover
+            color: #fff
+        &::after
+            content: ''
+            display: block
+            width: 100%
+            height: 2px
+            background-color: #D1A954
+            transition: 0.3s
+            opacity: 0
+        &_active
+            &::after
+                opacity: 1
+    &__contacts
+        display: flex
+        align-items: center
+        & a 
+            display: block
+            margin-right: 50px
+            &:last-child
+                margin-right: 0
+        & svg
+            & path
+                fill-opacity: 1
